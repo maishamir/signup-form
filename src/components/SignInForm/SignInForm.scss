@@ -1,0 +1,107 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: white;
+  border-radius: 0.625rem;
+  padding: 2.5rem;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.16);
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    &-input {
+      padding: 1rem 2rem;
+      border: 1px solid #dedede;
+      caret-color: $purple;
+      border-radius: 0.35rem;
+      outline: none;
+      
+      &:focus {
+        border-color: $purple;
+      }
+      ::placeholder {
+        color: $charcoal;
+        font-weight: 600;
+        font-size: 0.875rem;
+      }
+
+      &--error {
+        background-image: url("../../assets/images/icon-error.svg");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        border: 1px solid $salmon;
+        // box-shadow: inset 0 0 0 2px $salmon;
+      }
+
+      
+    }
+
+    small {
+      text-align: right;
+      color: $salmon;
+      font-size: 0.6875rem;
+      font-style: italic;
+
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 35vw;
+  }
+
+  &__banner {
+    color: white;
+    padding: 1rem 2.5rem;
+    text-align: center;
+    background-color: $purple;
+    border-radius: 0.625rem;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.16);
+    font-size: 0.9375rem;
+    &--bold {
+      font-weight: bold;
+    }
+  }
+
+  &__submitButton {
+    color: white;
+    border: none;
+
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: $green;
+    box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    transition: all 0.075s ease-in-out;
+
+    &:hover {
+      transform: translateY(2px);
+      background-color: #77E2B3;
+      box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.1) inset;
+    }
+  }
+
+  &__footer {
+    font-size: 0.6875rem;
+    color: #bab7d4;
+    text-align: center;
+
+    &--span {
+      font-weight: bold;
+      color: $salmon;
+      cursor: pointer;
+    }
+  }
+}
