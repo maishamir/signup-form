@@ -78,13 +78,13 @@ function SignInForm() {
             value={formData.firstName}
             onChange={handleChange}
           />
-          <small style={{ visibility: errors.password ? "visible" : "hidden"}}>{errors.firstName || 'placeholder'}</small>
+          <small style={{ visibility: errors.firstName ? "visible" : "hidden"}}>{errors.firstName || 'placeholder'}</small>
         </div>
 
 
         <div className="form__input">
           <input
-            className={`form__input-input ${errors.firstName ? 'form__input-input--error' : '' }`}
+            className={`form__input-input ${errors.lastName ? 'form__input-input--error' : '' }`}
             type="text"
             placeholder="Last Name"
             name="lastName"
@@ -92,13 +92,13 @@ function SignInForm() {
             value={formData.lastName}
             onChange={handleChange}
           />
-          <small style={{ visibility: errors.password ? "visible" : "hidden"}}>{errors.lastName || 'placeholder'}</small>
+          <small style={{ visibility: errors.lastName ? "visible" : "hidden"}}>{errors.lastName || 'placeholder'}</small>
         </div>
 
 
         <div className="form__input">
           <input
-            className={`form__input-input ${errors.firstName ? 'form__input-input--error' : '' }`}
+            className={`form__input-input ${errors.email ? 'form__input-input--error' : '' }`}
             type="text"
             placeholder="Email Address"
             name="email"
@@ -106,11 +106,11 @@ function SignInForm() {
             value={formData.email}
             onChange={handleChange}
           />
-          <small style={{ visibility: errors.password ? "visible" : "hidden"}}>{errors.email || 'placeholder'}</small>
+          <small style={{ visibility: errors.email ? "visible" : "hidden"}}>{errors.email || 'placeholder'}</small>
         </div>
         <div className="form__input">
           <input
-            className={`form__input-input ${errors.firstName ? 'form__input-input--error' : '' }`}
+            className={`form__input-input ${errors.password ? 'form__input-input--error' : '' }`}
             type="password"
             name="password"
             placeholder="Password"
